@@ -17,9 +17,9 @@ app.on('window-all-closed', function() {
 var startupOpts = {
     useContentSize: true,
     width: 800,
-    height: 600,
+    height: 680,
     center: true,
-    resizable: true,
+    resizable: false,
     alwaysOnTop: false,
     fullscreen: false,
     skipTaskbar: true,

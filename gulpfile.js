@@ -55,10 +55,10 @@ gulp.task('dev', function(cb) {
 
     var isWin = /^win/.test(process.platform);
     require('child_process')
-        .exec((isWin ? 'sh' : 'concurrently "node') + ' ./node_modules/.bin/electron ./src/" "webpack -w"', {
-            cwd: __dirname,
+        .exec((isWin ? 'sh' : 'concurrently') + ' "electron ./src/" "webpack -w"',function(err,stdout,stderr){
+            cwd: __dirname
             env: {
                 NODE_ENV: 'dev'
             }
-        }, cb);
+        },cb);
 });
