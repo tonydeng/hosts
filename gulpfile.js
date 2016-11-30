@@ -52,10 +52,10 @@ gulp.task('dev', function(cb) {
     gulp.watch('src/*', function(event) {
         gulp.src('src/*').pipe(livereload());
     });
-    
+
     var isWin = /^win/.test(process.platform);
     require('child_process')
-        .exec((isWin ? 'sh' : 'node') + ' ./node_modules/.bin/electron ./src/', {
+        .exec((isWin ? 'sh' : 'concurrently "node') + ' ./node_modules/.bin/electron ./src/" "webpack -w"', {
             cwd: __dirname,
             env: {
                 NODE_ENV: 'dev'
