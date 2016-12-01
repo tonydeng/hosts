@@ -74,3 +74,51 @@ Electron 的工作方式更像 Node.js 运行时。 Electron 的 APIs 更加底�
 ### 项目说明
 
 > A complete solution to package and build a ready for distribution Electron app for macOS, Windows and Linux with “auto update” support out of the box.
+
+## 调试工具
+
+### devtron
+Devtron是一个与Chrome DevTools集成的开源工具，可用于对Electron应用进行检测、监控与调度。Devtron包含以下特性：
+
+1. 需求图 —— 一个以可视化方式展示某个应用的内部与外部库依赖的工具
+1. 事件 —— 一个检测工具，可列出目前已注册的事件与监听者
+1. IPC —— 一个用于追踪及显示已发送和接收消息的监控工具
+1. Linter
+
+#### 安装
+
+在项目的目录下执行下面的命令
+
+```bash
+npm install --save-dev devtron
+```
+
+会在package.json中添加相应依赖
+
+```javascript
+"devDependencies": {
+  "devtron": "^1.4.0",
+  ......
+},
+```
+
+#### 运行
+
+在Console中执行
+
+```
+require('devtron').install()
+```
+![devtron  run](images/devtron-run.png)
+
+运行界面
+
+![devtron interface](images/devtron-interface.png)
+
+## 测试工具
+
+### Spectron
+
+> Easily test your Electron apps using ChromeDriver and WebdriverIO.
+
+[GitHub项目地址](https://github.com/electron/spectron)
