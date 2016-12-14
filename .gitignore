@@ -1,6 +1,7 @@
 #build
 build/
 dist/
+cache/
 
 #npm
 npm-debug.log

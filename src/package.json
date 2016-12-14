@@ -1,0 +1,12 @@
+{
+  "name": "hosts",
+  "version": "1.0.0",
+  "description": "Hosts Manager",
+  "main": "main.js",
+  "keywords": [
+    "electron",
+    "hosts"
+  ],
+  "author": "tonydeng",
+  "license": "MIT"
+}
